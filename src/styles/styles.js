@@ -1,9 +1,9 @@
 import Constants from 'expo-constants';
 import { StyleSheet } from 'react-native';
 
-export const mainBgColor = '#0f0f0f';
-export const mainTxtColor = '#f0f0f0';
-export const primaryColor = '#0000cc';
+export const mainBgColor = '#141414';
+export const mainTxtColor = '#dbdbdb';
+export const primaryColor = '#c53321';
 
 export const styles = StyleSheet.create({
   container: {
