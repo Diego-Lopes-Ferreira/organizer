@@ -1,14 +1,20 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { styles } from '../../styles/styles';
 
 export default function PageTwo({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text>Screen Two</Text>
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text>Go back</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.text}>Screen Two</Text>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => navigation.goBack()}
+          style={styles.buttonPrimary}
+        >
+          <Text style={styles.text}>Go back</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   )
 }
