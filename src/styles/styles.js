@@ -1,23 +1,17 @@
-import {light, dark} from './general'
-import { color } from 'react-native-reanimated';
-
-const mainBgColor = '#141414';
-const mainTxtColor = '#dbdbdb';
-const primaryColor = '#c53321';
-
-const colors = {
-  light: {},
-  dark: {}
-}
+import React from 'react';
+import * as general from './general'
+import colors from './colors';
 
 
 const themesList = {
   light: {
     colors: colors.light,
-    statusBar: 'dark'
+    styles: general.generalLight, 
+    statusBar: 'dark',
   },
   dark: {
     colors: colors.light,
+    styles: general.generalDark, 
     statusBar: 'light',
   },
 }

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, ScrollView } from 'react-native';
-import { styles } from '../../styles/styles';
+import { useTheme } from '../../contexts/Theme';
+
 
 export default function PageTwo({ navigation }) {
+  const { theme } = useTheme();
+  const styles = theme.styles;
   return (
     <ScrollView>
       <View style={styles.container}>

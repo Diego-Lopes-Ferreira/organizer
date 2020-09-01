@@ -26,12 +26,12 @@ export default function ThemeProvider({ children }) {
   useEffect(async () => {
     const userTheme = await readThemeAsync();
     if (userTheme != theme) {  
-      setTheme(selectTheme(userTheme));
+      setTheme(userTheme);
     }
   }, [])
 
   function setTheme(theme) {
-    setStateTheme(theme);
+    setStateTheme(selectTheme(theme));
     saveThemeAsync(theme);
   }
 
@@ -44,7 +44,7 @@ export default function ThemeProvider({ children }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error("useTheme must be used within a ThemeProvider");
+  if (!context) throw new Error('useTheme must be used within a ThemeProvider\n/src/contexts/Theme.js');
   const { theme, setTheme } = context;
   return { theme, setTheme };
 }

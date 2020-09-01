@@ -1,9 +1,11 @@
+import React from 'react';
 import Constants from 'expo-constants';
 import { StyleSheet } from 'react-native';
+import colors from './colors';
 
-export const general = {
-  light: generalLight,
-  dark: generalDark,
+export {
+  generalLight,
+  generalDark,
 }
 
 const generalDark = StyleSheet.create({
@@ -12,7 +14,7 @@ const generalDark = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 10,
     flex: 1,
-    backgroundColor: mainBgColor,
+    backgroundColor: colors.dark.mainBgColor,
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
@@ -21,10 +23,10 @@ const generalDark = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: mainTxtColor,
+    color: colors.dark.mainTxtColor,
   },
   buttonPrimary: {
-    backgroundColor: primaryColor,
+    backgroundColor: colors.dark.primaryColor,
     borderRadius: 15,
     minHeight: 50,
     minWidth: 200,
@@ -39,7 +41,7 @@ const generalLight = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 10,
     flex: 1,
-    backgroundColor: mainBgColor,
+    backgroundColor: colors.light.mainBgColor,
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
@@ -48,10 +50,10 @@ const generalLight = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    color: mainTxtColor,
+    color: colors.light.mainTxtColor,
   },
   buttonPrimary: {
-    backgroundColor: primaryColor,
+    backgroundColor: colors.light.primaryColor,
     borderRadius: 15,
     minHeight: 50,
     minWidth: 200,
