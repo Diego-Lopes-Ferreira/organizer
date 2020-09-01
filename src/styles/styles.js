@@ -1,34 +1,25 @@
-import Constants from 'expo-constants';
-import { StyleSheet } from 'react-native';
+import {light, dark} from './general'
+import { color } from 'react-native-reanimated';
 
-export const mainBgColor = '#141414';
-export const mainTxtColor = '#dbdbdb';
-export const primaryColor = '#c53321';
+const mainBgColor = '#141414';
+const mainTxtColor = '#dbdbdb';
+const primaryColor = '#c53321';
 
-export const styles = StyleSheet.create({
-  container: {
-    paddingTop: Constants.statusBarHeight + 10,
-    paddingBottom: 10,
-    paddingHorizontal: 10,
-    flex: 1,
-    backgroundColor: mainBgColor,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+const colors = {
+  light: {},
+  dark: {}
+}
+
+
+const themesList = {
+  light: {
+    colors: colors.light,
+    statusBar: 'dark'
   },
-  scrollArea: {
-    justifyContent: 'center',
-    alignItems: 'center',
+  dark: {
+    colors: colors.light,
+    statusBar: 'light',
   },
-  text: {
-    color: mainTxtColor,
-  },
-  buttonPrimary: {
-    backgroundColor: primaryColor,
-    borderRadius: 15,
-    minHeight: 50,
-    minWidth: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-});
+}
+
+export default themesList
