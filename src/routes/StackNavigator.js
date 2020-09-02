@@ -1,12 +1,14 @@
 import React from 'react';
 import { createStackNavigator, CardStyleInterpolators, TransitionSpecs } from '@react-navigation/stack';
 
-import HomeTabs from './HomeTabs'
-import PageTwo from '../Pages/PageTwo/index';
+//import HomeTabs from './HomeTabs'
+import PageTwo from '../Pages/PageTwo';
+import PageOne from '../Pages/PageOne';
+import PageTree from '../Pages/PageTree';
 
 const Stack = createStackNavigator();
 
-export default function MainNavigator() {
+export default function StackNavigator() {
   return (
     <Stack.Navigator screenOptions={{
       headerShown: false,
@@ -18,11 +20,8 @@ export default function MainNavigator() {
         close: TransitionSpecs.TransitionIOSSpec,
       },
     }}>
-      <Stack.Screen name='home' component={HomeTabs} />
+      {/* <Stack.Screen name='home' component={HomeTabs} /> */}
       <Stack.Screen name='other' component={PageTwo} />
     </Stack.Navigator>
   );
 }
-
-/* <NavigationContainer> */
-/* </NavigationContainer> */

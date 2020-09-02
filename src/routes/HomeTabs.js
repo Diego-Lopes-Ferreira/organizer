@@ -2,11 +2,11 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { useTheme } from '../contexts/Theme';
 
 import PageOne from '../Pages/PageOne/index';
 import PageTree from '../Pages/PageTree/index';
 
-import { mainBgColor, primaryColor, mainTxtColor } from '../styles/styles';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,9 +21,10 @@ export default function HomeTabs() {
     </Tab.Navigator>
   );
 }
-
+ 
 function personalizedTabBar({ state, descriptors, navigation }) {
   const focusedOptions = descriptors[state.routes[state.index].key].options;
+  const { theme } = useTheme();
   if (focusedOptions.tabBarVisible === false) {
     return null;
   }
@@ -72,15 +73,15 @@ function personalizedTabBar({ state, descriptors, navigation }) {
                 justifyContent: 'center',
                 alignItems: 'center',
                 height: 50,
-                backgroundColor: mainBgColor,
+                backgroundColor: theme.colors.mainBgColor,
               }
             }
           >
             <FontAwesome
               name={iconName}
               size={24}
-              color={isFocused ? mainTxtColor : mainTxtColor + '77'} />
-            <Text style={{ color: isFocused ? mainTxtColor : mainTxtColor + '77' }}>
+              color={isFocused ? theme.colors.mainTxtColor : theme.colors.mainTxtColor + '77'} />
+            <Text style={{ color: isFocused ? theme.colors.mainTxtColor : theme.colors.mainTxtColor + '77' }}>
               {label}
             </Text>
           </TouchableOpacity>
