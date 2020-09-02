@@ -23,11 +23,14 @@ function selectTheme(themeType) {
 export default function ThemeProvider({ children }) {
   const [theme, setStateTheme] = useState(selectTheme());
 
-  useEffect(async () => {
-    const userTheme = await readThemeAsync();
-    if (userTheme != theme) {  
-      setTheme(userTheme);
+  useEffect(() => {
+    async function fetchTheme() {
+      const userTheme = await readThemeAsync();
+      if (userTheme != theme) {  
+        setTheme(userTheme);
+      }
     }
+    fetchTheme();
   }, [])
 
   function setTheme(theme) {
