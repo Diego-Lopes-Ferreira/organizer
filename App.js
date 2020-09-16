@@ -1,10 +1,10 @@
-import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import React from "react";
+import { StatusBar } from "expo-status-bar";
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
 
-import Routes from './src/routes/Routes';
-import ThemeProvider, { useTheme } from './src/contexts/Theme';
+import Routes from "./src/routes/Routes";
+import ThemeProvider, { useTheme } from "./src/contexts/Theme";
 
 export default function App() {
   return (
