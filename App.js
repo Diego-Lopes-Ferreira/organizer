@@ -19,5 +19,5 @@ export default function App() {
 
 function StatusBarConfig() {
   const { theme } = useTheme();
-  return <StatusBar style={theme.statusBar} />
+  return <StatusBar style={theme.statusBar} />;
 }

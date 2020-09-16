@@ -11,10 +11,10 @@ const Drawer = createDrawerNavigator();
 function DefaultRoutes() {
   return (
     <Drawer.Navigator
-      backBehavior='initialRoute'
-      initialRouteName='one'
+      backBehavior="initialRoute"
+      initialRouteName="one"
       statusBarAnimation="slide"
-      drawerContent={props => <DrawerContents {...props} />}
+      drawerContent={(props) => <DrawerContents {...props} />}
     >
       <Drawer.Screen name="One" component={PageOne} />
       <Drawer.Screen name="Two" component={PageTwo} />

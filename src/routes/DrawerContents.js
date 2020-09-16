@@ -1,31 +1,29 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Switch } from 'react-native';
+import { View, Text, Switch } from 'react-native';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
-
 import { FontAwesome } from '@expo/vector-icons';
-
 import { useTheme } from '../contexts/Theme';
 
 const screensInfo = [
   {
-    name: "One",
-    label: "The Label",
-    icon: "home",
+    name: 'One',
+    label: 'The Label',
+    icon: 'home',
   },
   {
-    name: "Two",
-    label: "The Label 2",
-    icon: "coffee",
+    name: 'Two',
+    label: 'The Label 2',
+    icon: 'coffee',
   },
   {
-    name: "Tree",
-    label: "The Label 3",
-    icon: "gift",
+    name: 'Tree',
+    label: 'The Label 3',
+    icon: 'gift',
   },
-]
+];
 
 function DrawerContents(props) {
-  const { theme, setTheme} = useTheme();
+  const { theme, setTheme } = useTheme();
   return (
     <View style={{ flex: 1 }}>
       <DrawerContentScrollView {...props}>
@@ -44,7 +42,7 @@ function DrawerContents(props) {
       <View>
         <Switch
           onValueChange={() => {
-            setTheme(theme.name === 'dark' ? 'light' : 'dark')
+            setTheme(theme.name === 'dark' ? 'light' : 'dark');
             props.navigation.closeDrawer();
           }}
           value={theme.name === 'dark'}
@@ -56,11 +54,11 @@ function DrawerContents(props) {
             <FontAwesome name="sign-out" color={color} size={size} />
           )}
           label="Sign Out"
-          onPress={() => console.log('youSignedOut')}
+          onPress={() => global.console.log('youSignedOut')}
         />
       </View>
     </View>
-  )
+  );
 }
 
 export default DrawerContents;
