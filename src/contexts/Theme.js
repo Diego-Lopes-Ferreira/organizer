@@ -2,13 +2,11 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 import { readThemeAsync, saveThemeAsync } from '../api/ThemeApi';
 import themesList from '../styles/styles';
 
-
 const ThemeContext = createContext();
 
-
 function selectTheme(themeType) {
-  if(themeType) {
-    switch(themeType) {
+  if (themeType) {
+    switch (themeType) {
       case 'dark':
         return themesList.dark;
       case 'light':
@@ -26,7 +24,7 @@ export default function ThemeProvider({ children }) {
   useEffect(() => {
     async function fetchTheme() {
       const userTheme = await readThemeAsync();
-      if (userTheme != theme) {  
+      if (userTheme != theme) {
         setTheme(userTheme);
       }
     }

@@ -7,21 +7,17 @@ import { useTheme } from '../contexts/Theme';
 import PageOne from '../Pages/PageOne/index';
 import PageTree from '../Pages/PageTree/index';
 
-
 const Tab = createBottomTabNavigator();
 
 export default function HomeTabs() {
   return (
-    <Tab.Navigator
-      backBehavior='initialRoute'
-      tabBar={personalizedTabBar}
-    >
+    <Tab.Navigator backBehavior="initialRoute" tabBar={personalizedTabBar}>
       <Tab.Screen name="pageOne" component={PageOne} />
       <Tab.Screen name="tabtwo" component={PageTree} />
     </Tab.Navigator>
   );
 }
- 
+
 function personalizedTabBar({ state, descriptors, navigation }) {
   const focusedOptions = descriptors[state.routes[state.index].key].options;
   const { theme } = useTheme();
@@ -33,9 +29,11 @@ function personalizedTabBar({ state, descriptors, navigation }) {
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
-          options.tabBarLabel !== undefined ?
-            options.tabBarLabel : options.title !== undefined ?
-              options.title : route.name;
+          options.tabBarLabel !== undefined
+            ? options.tabBarLabel
+            : options.title !== undefined
+              ? options.title
+              : route.name;
         const isFocused = state.index === index;
         const onPress = () => {
           const event = navigation.emit({
@@ -67,21 +65,30 @@ function personalizedTabBar({ state, descriptors, navigation }) {
             activeOpacity={0.8}
             onPress={onPress}
             onLongPress={onLongPress}
-            style={
-              {
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: 50,
-                backgroundColor: theme.colors.mainBgColor,
-              }
-            }
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              height: 50,
+              backgroundColor: theme.colors.mainBgColor,
+            }}
           >
             <FontAwesome
               name={iconName}
               size={24}
-              color={isFocused ? theme.colors.mainTxtColor : theme.colors.mainTxtColor + '77'} />
-            <Text style={{ color: isFocused ? theme.colors.mainTxtColor : theme.colors.mainTxtColor + '77' }}>
+              color={
+                isFocused
+                  ? theme.colors.mainTxtColor
+                  : theme.colors.mainTxtColor + '77'
+              }
+            />
+            <Text
+              style={{
+                color: isFocused
+                  ? theme.colors.mainTxtColor
+                  : theme.colors.mainTxtColor + '77',
+              }}
+            >
               {label}
             </Text>
           </TouchableOpacity>

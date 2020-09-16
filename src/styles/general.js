@@ -37,7 +37,7 @@ function genGeneralStyle(colors) {
   });
   return theStyle;
 }
-/* 
+/*
 const generalLight = StyleSheet.create({
   container: {
     paddingTop: Constants.statusBarHeight + 10,

@@ -5,7 +5,7 @@ const colors = {
     mainBgColor: '#dbdbdb',
     mainTxtColor: '#141414',
     primaryColor: '#c53321',
-    
+
   },
   dark: {
     mainBgColor: '#141414',

@@ -8,16 +8,16 @@ export default function PageTree({ navigation }) {
   const styles = theme.styles;
   return (
     <ScrollView>
-    <View style={styles.container}>
-      <Text style={styles.text}>Screen Tree</Text>
-      <TouchableOpacity
-        activeOpacity={0.8}
-        onPress={() => navigation.goBack()}
-        style={styles.buttonPrimary}
-      >
-        <Text style={styles.text}>Go back</Text>
-      </TouchableOpacity>
-    </View>
-  </ScrollView>
+      <View style={styles.container}>
+        <Text style={styles.text}>Screen Tree</Text>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => navigation.goBack()}
+          style={styles.buttonPrimary}
+        >
+          <Text style={styles.text}>Go back</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   )
 }
