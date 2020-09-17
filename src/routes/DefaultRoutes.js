@@ -3,8 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import DrawerContents from './DrawerContents';
 
 import PageOne from '../Pages/PageOne';
-import PageTwo from '../Pages/PageTwo';
-import PageTree from '../Pages/PageTree';
+import Home from '../Pages/Home';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,10 +14,10 @@ function DefaultRoutes() {
       initialRouteName="one"
       statusBarAnimation="slide"
       drawerContent={(props) => <DrawerContents {...props} />}
+      DefaultRoutes="home"
     >
+      <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="One" component={PageOne} />
-      <Drawer.Screen name="Two" component={PageTwo} />
-      <Drawer.Screen name="Tree" component={PageTree} />
     </Drawer.Navigator>
   );
 }
