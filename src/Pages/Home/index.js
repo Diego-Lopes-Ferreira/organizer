@@ -9,7 +9,7 @@ export default function Home({ navigation }) {
   const styles = theme.styles.general;
   return (
     <View style={styles.container}>
-      <Header />
+      <Header toggleDrawer={() => navigation.toggleDrawer()} />
       <Text style={styles.text}>Home</Text>
       <TouchableOpacity
         activeOpacity={0.8}
