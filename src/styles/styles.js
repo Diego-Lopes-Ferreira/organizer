@@ -1,21 +1,20 @@
-import React from 'react';
-import { genGeneralStyle } from './general'
-import colors from './colors';
-
+import React from "react";
+import { genGeneralStyle } from "./general";
+import colors from "./colors";
 
 const themesList = {
   light: {
-    name: 'light',
+    name: "light",
     colors: colors.light,
     styles: genGeneralStyle(colors.light),
-    statusBar: 'dark',
+    statusBar: "dark",
   },
   dark: {
-    name: 'dark',
-    colors: colors.light,
+    name: "dark",
+    colors: colors.dark,
     styles: genGeneralStyle(colors.dark),
-    statusBar: 'light',
+    statusBar: "light",
   },
-}
+};
 
 export default themesList;

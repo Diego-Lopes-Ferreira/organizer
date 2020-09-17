@@ -5,7 +5,7 @@ import { StyleSheet } from "react-native";
 export { genGeneralStyle };
 
 function genGeneralStyle(colors) {
-  const theStyle = StyleSheet.create({
+  const general = StyleSheet.create({
     container: {
       paddingTop: Constants.statusBarHeight + 10,
       paddingBottom: 10,
@@ -32,5 +32,29 @@ function genGeneralStyle(colors) {
       marginVertical: 10,
     },
   });
-  return theStyle;
+  const drawer = StyleSheet.create({
+    drawerItemView: {
+      //backgroundColor: "#ff0000",
+      paddingVertical: 10,
+      paddingHorizontal: 30,
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
+    drawerItemText: {
+      fontSize: 20,
+      color: colors.gray4,
+    },
+    drawerItemTitle: {
+      fontSize: 25,
+      color: colors.gray5,
+    },
+    drawerAppName: {
+      //backgroundColor: "#ff0000",
+      paddingVertical: 10,
+      paddingHorizontal: 30,
+      flexDirection: "row",
+      justifyContent: "center",
+    },
+  });
+  return { general, drawer };
 }
