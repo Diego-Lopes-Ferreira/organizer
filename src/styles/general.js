@@ -1,11 +1,8 @@
-import React from 'react';
-import Constants from 'expo-constants';
-import { StyleSheet } from 'react-native';
+import React from "react";
+import Constants from "expo-constants";
+import { StyleSheet } from "react-native";
 
-
-export {
-  genGeneralStyle,
-}
+export { genGeneralStyle };
 
 function genGeneralStyle(colors) {
   const theStyle = StyleSheet.create({
@@ -15,12 +12,12 @@ function genGeneralStyle(colors) {
       paddingHorizontal: 10,
       flex: 1,
       backgroundColor: colors.mainBgColor,
-      alignItems: 'center',
-      justifyContent: 'flex-start',
+      alignItems: "center",
+      justifyContent: "flex-start",
     },
     scrollArea: {
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: "center",
+      alignItems: "center",
     },
     text: {
       color: colors.mainTxtColor,
@@ -30,39 +27,10 @@ function genGeneralStyle(colors) {
       borderRadius: 15,
       minHeight: 50,
       minWidth: 200,
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: "center",
+      alignItems: "center",
       marginVertical: 10,
     },
   });
   return theStyle;
 }
-/*
-const generalLight = StyleSheet.create({
-  container: {
-    paddingTop: Constants.statusBarHeight + 10,
-    paddingBottom: 10,
-    paddingHorizontal: 10,
-    flex: 1,
-    backgroundColor: colors.light.mainBgColor,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  scrollArea: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    color: colors.light.mainTxtColor,
-  },
-  buttonPrimary: {
-    backgroundColor: colors.light.primaryColor,
-    borderRadius: 15,
-    minHeight: 50,
-    minWidth: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-});
-*/
