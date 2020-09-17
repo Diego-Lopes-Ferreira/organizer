@@ -1,24 +1,19 @@
-import React from "react";
-import { View, Text, Switch } from "react-native";
-import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
-import { FontAwesome } from "@expo/vector-icons";
-import { useTheme } from "../contexts/Theme";
+import React from 'react';
+import { View, Text, Switch } from 'react-native';
+import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
+import { FontAwesome } from '@expo/vector-icons';
+import { useTheme } from '../contexts/Theme';
 
 const screensInfo = [
   {
-    name: "One",
-    label: "The Label",
-    icon: "home",
+    name: 'Home',
+    label: 'Home',
+    icon: 'coffee',
   },
   {
-    name: "Two",
-    label: "The Label 2",
-    icon: "coffee",
-  },
-  {
-    name: "Tree",
-    label: "The Label 3",
-    icon: "gift",
+    name: 'One',
+    label: 'The Label',
+    icon: 'home',
   },
 ];
 
@@ -52,7 +47,7 @@ function DrawerContents(props) {
             <FontAwesome name="sign-out" color={color} size={size} />
           )}
           label="Sign Out"
-          onPress={() => global.console.log("youSignedOut")}
+          onPress={() => global.console.log('youSignedOut')}
         />
       </View>
     </View>
@@ -68,15 +63,15 @@ function ThemeSwitcherItem({ theme, setTheme, close }) {
         trackColor={{ false: theme.colors.gray1, true: theme.colors.gray1 }}
         //ball
         thumbColor={
-          theme.name === "dark" ? theme.colors.primary2 : theme.colors.primary2
+          theme.name === 'dark' ? theme.colors.primary2 : theme.colors.primary2
         }
         //idk
         ios_backgroundColor={theme.colors.gray1}
         onValueChange={() => {
-          setTheme(theme.name === "dark" ? "light" : "dark");
+          setTheme(theme.name === 'dark' ? 'light' : 'dark');
           close(); //props.navigation.closeDrawer();
         }}
-        value={theme.name === "dark"}
+        value={theme.name === 'dark'}
       />
     </View>
   );
