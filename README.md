@@ -39,6 +39,17 @@
 
 Pull requests are welcome. For bigger changes, please open an issue first to discuss what you would like to change.
 
+### To-do
+
+#### App structure:
+
+- [ ] Auth function
+- [ ] Screens
+- [ ] Drawer Itens
+<!--
+  - [ ]
+-->
+
 ## Contribuitors
 
 Diego Lopes Ferreira – [@Twitter](https://twitter.com/Diego_simSouEu) – [@Instagram](https://www.instagram.com/diego.lopes.f/) - [LinkedIn](https://www.linkedin.com/in/diego-lopes-ferreira-a23a8919b/) - [Coders Rank](https://profile.codersrank.io/user/diego-lopes-ferreira)
