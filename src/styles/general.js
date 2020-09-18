@@ -36,9 +36,15 @@ function genGeneralStyle(colors) {
     container: {
       //backgroundColor: '#ff0000',
       width: '100%',
-      height: 100,
+      //height: 100,
       flexDirection: 'row',
       justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    titleWrapper: {
+      //marginRight: 32,
+      flex: 1,
+      justifyContent: 'center',
       alignItems: 'center',
     },
     title: {
