@@ -18,6 +18,7 @@
 - :one: Everything on 1 app
 - :watch: [Time Tracking](#time-tracking)
 - :white_check_mark: [Todo Lists](#todo-lists)
+- :white_check_mark: [Habit Tracking](#habit-tracking)
 - :calendar: [Calendar](#calendar)
 
 ## Usage
@@ -26,6 +27,8 @@
 
 ### :white_check_mark: Todo Lists
 
+### :white_check_mark: Habit Tracking
+
 ### :calendar: Calendar
 
 ---
@@ -33,22 +36,11 @@
 ## :rocket: Release History
 
 - 1.0.0
-  - (??/09/2020)
+  - (??/10/2020)
 
 ## Contribute
 
 Pull requests are welcome. For bigger changes, please open an issue first to discuss what you would like to change.
-
-### To-do
-
-#### App structure:
-
-- [ ] Auth function
-- [ ] Screens
-- [ ] Drawer Itens
-<!--
-  - [ ]
--->
 
 ## Contribuitors
 
