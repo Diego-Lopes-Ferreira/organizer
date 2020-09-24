@@ -16,10 +16,10 @@
 ## Features
 
 - :one: Everything on 1 app
-- :watch: [Time Tracking](#time-tracking)
-- :white_check_mark: [Todo Lists](#todo-lists)
-- :white_check_mark: [Habit Tracking](#habit-tracking)
-- :calendar: [Calendar](#calendar)
+- :watch: [Time Tracking](#watch-time-tracking)
+- :white_check_mark: [Todo Lists](#white_check_mark-todo-lists)
+- :white_check_mark: [Habit Tracking](#white_check_mark-habit-tracking)
+- :calendar: [Calendar](#calendar-calendar)
 
 ## Usage
 
