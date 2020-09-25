@@ -11,7 +11,7 @@ function genGeneralStyle(colors) {
       paddingBottom: 10,
       paddingHorizontal: 10,
       flex: 1,
-      backgroundColor: colors.mainBgColor,
+      backgroundColor: colors.gray1,
       alignItems: 'center',
       justifyContent: 'flex-start',
     },
@@ -20,10 +20,10 @@ function genGeneralStyle(colors) {
       alignItems: 'center',
     },
     text: {
-      color: colors.mainTxtColor,
+      color: colors.gray6,
     },
     buttonPrimary: {
-      backgroundColor: colors.primaryColor,
+      backgroundColor: colors.green1,
       borderRadius: 15,
       minHeight: 50,
       minWidth: 200,
@@ -49,7 +49,7 @@ function genGeneralStyle(colors) {
     },
     title: {
       fontSize: 30,
-      color: colors.gray8,
+      color: colors.gray6,
     },
   });
   const drawer = StyleSheet.create({
@@ -62,7 +62,7 @@ function genGeneralStyle(colors) {
     },
     drawerItemText: {
       fontSize: 20,
-      color: colors.gray4,
+      color: colors.gray5,
     },
     drawerItemTitle: {
       fontSize: 25,

@@ -32,9 +32,10 @@ const colors = {
     gray1: '#2E2F33',
     gray2: '#47484F',
     gray3: '#757782',
-    gray4: '#AAADBD',
+    // ---
+    gray4: '#DADEF2',
     gray5: '#CACDE0',
-    gray6: '#DADEF2',
+    gray6: '#AAADBD',
 
     blue1: '#2F4FED',
     blue2: '#2D4ADB',
