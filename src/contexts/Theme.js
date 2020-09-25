@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import { readThemeAsync, saveThemeAsync } from '../api/ThemeApi';
 import themesList from '../styles/styles';
 
@@ -29,7 +29,7 @@ export default function ThemeProvider({ children }) {
       }
     }
     fetchTheme();
-  }, [])
+  }, []);
 
   function setTheme(theme) {
     setStateTheme(selectTheme(theme));
@@ -45,7 +45,10 @@ export default function ThemeProvider({ children }) {
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  if (!context) throw new Error('useTheme must be used within a ThemeProvider\n/src/contexts/Theme.js');
+  if (!context)
+    throw new Error(
+      'Organizer: useTheme must be used within a ThemeProvider\n/src/contexts/Theme.js'
+    );
   const { theme, setTheme } = context;
   return { theme, setTheme };
 }
