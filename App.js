@@ -1,10 +1,10 @@
-import React from "react";
-import { StatusBar } from "expo-status-bar";
-import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
+import React from 'react';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 
-import Routes from "./src/routes/Routes";
-import ThemeProvider, { useTheme } from "./src/contexts/Theme";
+import Routes from './src/routes/Routes';
+import StatusBarConfig from './src/Components/StatusBarConfig';
+import ThemeProvider from './src/contexts/Theme';
 
 export default function App() {
   return (
@@ -15,9 +15,4 @@ export default function App() {
       </ThemeProvider>
     </NavigationContainer>
   );
-}
-
-function StatusBarConfig() {
-  const { theme } = useTheme();
-  return <StatusBar style={theme.statusBar} />;
 }
